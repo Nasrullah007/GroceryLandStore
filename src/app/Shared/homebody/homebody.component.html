@@ -1,0 +1,107 @@
+<div class="top-brands">
+    <div class="container">
+        <h3>Hot Offers</h3>
+        <div class="agile_top_brands_grids">
+
+            <div class="col-md-3 top_brand_left" *ngFor="let pro of AppHome?.Offers">
+                <div class="hover14 column">
+                    <div class="agile_top_brand_left_grid">
+                        <div class="agile_top_brand_left_grid_pos">
+                            <img src="assets/images/offer.png" alt=" " class="img-responsive" />
+                        </div>
+                        <div class="agile_top_brand_left_grid1">
+                            <figure>
+                                <div class="snipcart-item block">
+                                    <div class="snipcart-thumb">
+                                        <a routerLink="/ProductsDetail" routerLinkActive="router-link-active" [queryParams]="{Prodid: pro?.ProductId}"><img
+                                                src="{{UsersAPIURL + '/Content/ProductImages/' + pro?.Image}}" alt=" "
+                                                class="img-responsive" /></a>
+                                        <p>{{pro?.ProductName}}</p>
+                                        <h4>Rs {{CalculateDisCount(pro?.SaleDiscount,pro?.SalePrice) | number :
+                                            fractionSize }} <span>Rs {{pro?.SalePrice}}</span></h4>
+                                    </div>
+                                    <div class="snipcart-details top_brand_home_details">
+                                        <form action="#" method="post">
+                                            <fieldset>
+                                                <input type="hidden" name="cmd" value="_cart" />
+                                                <input type="hidden" name="add" value="1" />
+                                                <input type="hidden" name="business" value=" " />
+                                                <input type="hidden" name="item_name" value="Pepsi soft drink" />
+                                                <input type="hidden" name="amount" value="8.00" />
+                                                <input type="hidden" name="discount_amount" value="1.00" />
+                                                <input type="hidden" name="currency_code" value="USD" />
+                                                <input type="hidden" name="return" value=" " />
+                                                <input type="hidden" name="cancel_return" value=" " />
+                                                <input type="submit" name="submit" value="Add to cart" class="button" />
+                                            </fieldset>
+                                        </form>
+                                    </div>
+                                </div>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+<div class="fresh-vegetables">
+    <div class="container">
+        <h3>Top Products</h3>
+        <div class="w3l_fresh_vegetables_grids">
+            <div class="col-md-3 w3l_fresh_vegetables_grid w3l_fresh_vegetables_grid_left">
+                <div class="w3l_fresh_vegetables_grid2">
+                    <ul *ngFor="let Cat of AppHome?.Categories">
+                        <li><i class="fa fa-check" aria-hidden="true"></i><a routerLink="/Products"
+                                routerLinkActive="router-link-active"
+                                [queryParams]="{Catid: Cat.CategoryId}">{{Cat?.CategoryName}}</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-9 w3l_fresh_vegetables_grid_right" id="LeftPro">
+                <div class="col-md-4 top_brand_left" *ngFor="let pro of AppHome?.Products">
+                    <div class="hover14 column">
+                        <div class="agile_top_brand_left_grid">
+                            <div class="agile_top_brand_left_grid_pos">
+                                <img src="assets/images/offer.png" alt=" " class="img-responsive" />
+                            </div>
+                            <div class="agile_top_brand_left_grid1">
+                                <figure>
+                                    <div class="snipcart-item block">
+                                        <div class="snipcart-thumb">
+                                            <a routerLink="/ProductsDetail" routerLinkActive="router-link-active" [queryParams]="{Prodid: pro.ProductId}"><img
+                                                    src="{{UsersAPIURL + '/Content/ProductImages/' + pro?.Image}}"
+                                                    alt=" " class="img-responsive" /></a>
+                                            <p>{{pro?.ProductName}}</p>
+                                            <h4>Rs {{CalculateDisCount(pro?.SaleDiscount,pro?.SalePrice) | number :
+                                                fractionSize }} <span>Rs {{pro?.SalePrice}}</span></h4>
+                                        </div>
+                                        <div class="snipcart-details top_brand_home_details">
+                                            <form action="#" method="post">
+                                                <fieldset>
+                                                    <input type="hidden" name="cmd" value="_cart" />
+                                                    <input type="hidden" name="add" value="1" />
+                                                    <input type="hidden" name="business" value=" " />
+                                                    <input type="hidden" name="item_name" value="Pepsi soft drink" />
+                                                    <input type="hidden" name="amount" value="8.00" />
+                                                    <input type="hidden" name="discount_amount" value="1.00" />
+                                                    <input type="hidden" name="currency_code" value="USD" />
+                                                    <input type="hidden" name="return" value=" " />
+                                                    <input type="hidden" name="cancel_return" value=" " />
+                                                    <input type="submit" name="submit" value="Add to cart"
+                                                        class="button" />
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>

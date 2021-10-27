@@ -1,0 +1,6 @@
+#LeftPro{
+    height: 62vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: margin .25s ease-out;
+}
